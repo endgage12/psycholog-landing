@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --container-lg: 640px;
+  --container-xl: 1189px;
+  --container-2xl: 1440px;
+
+  --breakpoint-2xl: 1366px;
+}
+
+:root {
+  --color-primary: #333333;
+
+  --bg-color-primary: #F0F0F0;
+  --bg-color-secondary: #E0F7FA;
+  --bg-color-attention: #4CAF50;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.font-exo {
+  font-family: "Exo 2 Variable", sans-serif;
+}

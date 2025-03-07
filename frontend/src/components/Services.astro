@@ -1,0 +1,19 @@
+---
+const services = [
+    { title: "Индивидуальные консультации", description: "Описание услуги." },
+    { title: "Семейная терапия", description: "Описание услуги." },
+    { title: "Групповые сессии", description: "Описание услуги." }
+];
+---
+
+<section id="услуги">
+    <h2>Услуги</h2>
+    <ul>
+        {services.map(service => (
+                <li>
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                </li>
+        ))}
+    </ul>
+</section>

@@ -1,0 +1,13 @@
+---
+const navItems = ["Главная", "Обо мне", "Услуги", "Отзывы", "Контакты"];
+---
+
+<header>
+    <nav>
+        <ul>
+            {navItems.map(item => (
+                    <li><a href={`#${item.toLowerCase()}`}>{item}</a></li>
+            ))}
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,157 @@
+---
+import "@fontsource/lato";
+import '@fontsource-variable/exo-2';
+import '../assets/styles/global.css';
+---
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Профессиональные психологические услуги в Анапе. Индивидуальный подход к каждому клиенту.">
+	<meta name="keywords" content="психолог Анапа, психологические услуги, консультации психолога">
+	<title>Психолог в Анапе</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-gray-100 text-gray-900 font-exo">
+
+<!-- Шапка -->
+<header class="bg-white shadow-md">
+	<div class=" mx-auto flex items-center justify-between p-4">
+		<div class="flex items-center justify-center gap-4">
+			<div class="flex items-center justify-between w-12 h-12 rounded bg-gray-100 border border-gray-200 p-1">
+				<img src="/images/handshake-md.png" alt="Handshake">
+			</div>
+			<h1>Психологическая помощь в Анапе</h1>
+		</div>
+		<nav class="hidden md:flex">
+			<ul class="flex space-x-4 text-sm">
+				<li><a href="#about" class="hover:text-green-500">Обо мне</a></li>
+				<li><a href="#services" class="hover:text-green-500">Услуги</a></li>
+				<li><a href="#contact" class="hover:text-green-500">Контакты</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<!-- "Услуги" -->
+<section id="services" class="py-8 px-4 lg:px-20">
+	<div class="mx-auto">
+		<h2 class="inline-flex text-3xl font-semibold text-green-500 mb-8 border-b">Услуги</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="relative bg-white p-6 rounded-lg shadow-lg">
+				<span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">3000 ₽</span>
+				<h3 class="text-xl font-semibold text-gray-900 mb-4">Индивидуальные консультации</h3>
+				<p>Личные встречи для решения ваших индивидуальных проблем и достижения целей.</p>
+			</div>
+			<div class="relative bg-white p-6 rounded-lg shadow-lg">
+				<span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">3000 ₽</span>
+				<h3 class="text-xl font-semibold text-gray-900 mb-4">Семейное консультирование</h3>
+				<p>Помощь в разрешении семейных конфликтов и улучшении взаимоотношений.</p>
+			</div>
+			<div class="relative bg-white p-6 rounded-lg shadow-lg">
+				<span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">3000 ₽</span>
+				<h3 class="text-xl font-semibold text-gray-900 mb-4">Групповые тренинги</h3>
+				<p>Семинары и тренинги для развития личностных и профессиональных навыков.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- "Профиль работы" -->
+<section id="workProfile" class="py-8 px-4 lg:px-20 bg-gray-50">
+	<div class="mx-auto">
+		<h2 class="inline-flex text-3xl font-semibold text-green-500 mb-4 border-b">Профиль работы</h2>
+		<div class="mx-auto">
+			<ul class="space-y-4">
+				<li class="flex items-center justify-between p-4 bg-white rounded-lg shadow-md">
+					<div class="flex items-center space-x-4">
+						<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full">
+							<!-- Иконка -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 0V4m0 0c-2.21 0-4 1.79-4 4m4-4c2.21 0 4 1.79 4 4m-4 4v8m0 0c-2.21 0-4 1.79-4 4m4-4c2.21 0 4 1.79 4 4" />
+							</svg>
+						</div>
+						<div class="flex flex-col gap-2">
+							<h3 class="text-xl font-semibold text-gray-900">Индивидуальные консультации</h3>
+							<p class="text-gray-700">Личные встречи для решения ваших индивидуальных проблем и достижения целей.</p>
+						</div>
+					</div>
+					<!-- Иконка справа -->
+					<a href="https://t.me/yourusername" target="_blank" class="aspect-square w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
+						<img src="/images/telegram.png" class="-ml-1">
+					</a>
+				</li>
+				<li class="flex items-center justify-between p-4 bg-white rounded-lg shadow-md">
+					<div class="flex items-center space-x-4">
+						<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full">
+							<!-- Иконка -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 0V4m0 0c-2.21 0-4 1.79-4 4m4-4c2.21 0 4 1.79 4 4m-4 4v8m0 0c-2.21 0-4 1.79-4 4m4-4c2.21 0 4 1.79 4 4" />
+							</svg>
+						</div>
+						<div class="flex flex-col gap-2">
+							<h3 class="text-xl font-semibold text-gray-900">Семейное консультирование</h3>
+							<p class="text-gray-700">Помощь в разрешении семейных конфликтов и улучшении взаимоотношений.</p>
+						</div>
+					</div>
+					<!-- Иконка справа -->
+					<a href="https://t.me/yourusername" target="_blank" class="aspect-square w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
+						<img src="/images/telegram.png" class="-ml-1">
+					</a>
+				</li>
+				<li class="flex items-center justify-between p-4 bg-white rounded-lg shadow-md">
+					<div class="flex items-center space-x-4">
+						<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full">
+							<!-- Иконка -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 0V4m0 0c-2.21 0-4 1.79-4 4m4-4c2.21 0 4 1.79 4 4m-4 4v8m0 0c-2.21 0-4 1.79-4 4m4-4c2.21 0 4 1.79 4 4" />
+							</svg>
+						</div>
+						<div class="flex flex-col gap-2">
+							<h3 class="text-xl font-semibold text-gray-900">Групповые тренинги</h3>
+							<p class="text-gray-700">Семинары и тренинги для развития личностных и профессиональных навыков.</p>
+						</div>
+					</div>
+					<!-- Иконка справа -->
+					<a href="https://t.me/yourusername" target="_blank" class="aspect-square w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
+						<img src="/images/telegram.png" class="-ml-1">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- "Контакты" -->
+<section id="contact" class="bg-background text-primary py-16 px-4 lg:px-20">
+	<div class="container mx-auto">
+		<h2 class="text-3xl inline-flex text-accent font-semibold text-green-500 mb-4 border-b">Контакты</h2>
+		<p class="text-lg mb-4">Вы можете связаться со мной по телефону или по мессенджерам для записи на консультацию.</p>
+
+		<div class="flex items-center justify-start gap-4">
+			<div class="flex flex-col gap-2">
+				<a href="tel:+79001234567" class="text-accent text-lg border-b">+7 (900) 123-45-67</a>
+				<p>г. Анапа, ул. Приморская, д. 10</p>
+			</div>
+
+			<div class="inline-flex items-center gap-2 border border-gray-200 rounded-2xl p-2">
+				<a href="https://t.me/yourusername" target="_blank" class="w-16 h-16 flex items-center justify-center bg-white rounded-2xl">
+					<img src="/images/telegram.png" class="-ml-1">
+				</a>
+
+				<a href="https://t.me/yourusername" target="_blank" class="w-16 h-16 flex items-center justify-center bg-[#25d366] rounded-2xl">
+					<img src="/images/whatsapp.png">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="bg-white text-primary py-4">
+	<div class="container mx-auto text-center">
+		<p>&copy; Татьяна Жильцова.</p>
+	</div>
+</footer>
+</body>
+

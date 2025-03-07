@@ -1,0 +1,18 @@
+---
+const testimonials = [
+    { name: "Иван Иванов", feedback: "Отличный специалист, помог разобраться в себе." },
+    { name: "Анна Петрова", feedback: "Благодаря консультациям, наша семья стала крепче." }
+];
+---
+
+<section id="отзывы">
+    <h2>Отзывы</h2>
+    <ul>
+        {testimonials.map(testimonial => (
+                <li>
+                    <blockquote>"{testimonial.feedback}"</blockquote>
+                    <cite>- {testimonial.name}</cite>
+                </li>
+        ))}
+    </ul>
+</section>
