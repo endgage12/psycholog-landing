@@ -8,7 +8,35 @@
       </template>
     </el-calendar>
 
-    <ElDrawer v-model="isTimeModalVisible" direction="btt" :z-index="2001">
+    <ElDialog v-model="isTimeModalVisible">
+      <template #header>
+        <div class="flex gap-2 items-end">
+          <h4>Запись на прием,</h4>
+          <span>{{ formatDate(pickedDate) }}</span>
+        </div>
+      </template>
+
+      <template #default>
+        <el-form class="flex flex-col gap-4">
+          <el-input
+            v-model="clientPhone"
+            placeholder="Введите номер телефона"
+            :rules="phoneValidationRules"
+          >
+            <template #prepend> +7 </template>
+          </el-input>
+
+          <div class="flex items-center justify-center gap-2">
+            <el-button @click="pickTime('11:00')">11:00</el-button>
+            <el-button @click="pickTime('12:00')">12:00</el-button>
+            <el-button @click="pickTime('13:00')">13:00</el-button>
+            <el-button @click="pickTime('14:00')">14:00</el-button>
+          </div>
+        </el-form>
+      </template>
+    </ElDialog>
+
+    <ElDrawer v-model="isTimeDrawerVisible" direction="btt" :z-index="2001">
       <template #header>
         <h4>Записаться на прием</h4>
       </template>
@@ -57,6 +85,7 @@ const pickedTime = ref(null);
 const clientPhone = ref(null);
 
 const isTimeModalVisible = ref(false);
+const isTimeDrawerVisible = ref(false);
 const isMobile = ref(false);
 
 const phoneValidationRules = [
@@ -74,7 +103,8 @@ const phoneValidationRules = [
 
 const openTimeModal = (pDate) => {
   pickedDate.value = pDate;
-  isTimeModalVisible.value = true;
+  if (isMobile.value) isTimeDrawerVisible.value = true;
+  else isTimeModalVisible.value = true;
 };
 
 const pickTime = (time) => {
