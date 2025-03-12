@@ -1,6 +1,6 @@
 <template>
   <el-config-provider :locale="ru">
-    <el-calendar v-model="value">
+    <el-calendar class="mx-4" v-model="value">
       <template #date-cell="{ data }">
         <div class="w-full h-full" @click="openTimeModal(data.date)">
           {{ formatDate(data.date, isMobile) }}

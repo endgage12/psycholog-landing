@@ -24,10 +24,6 @@ import ECalendar from "../components/ECalendar.vue";
 
 <body class="bg-gray-100 text-gray-900 font-exo">
 
-<!--<Header title="Психолог в Анапе"/>-->
-
-<ECalendar client:only />
-
 <!-- Шапка -->
 <header class="bg-white shadow-md">
     <div class=" mx-auto flex items-center justify-between p-4">
@@ -53,21 +49,22 @@ import ECalendar from "../components/ECalendar.vue";
         <h2 class="inline-flex text-3xl font-semibold text-green-500 mb-8 border-b">Услуги</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="relative bg-white p-6 rounded-lg shadow-lg">
-                <span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">3000* ₽</span>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Индивидуальные консультации</h3>
-                <p>Личные встречи для решения ваших индивидуальных проблем и достижения целей.</p>
+                <span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">2000 ₽</span>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Консультация психолога</h3>
+                <p>Индивидуальные встречи для решения личных проблем и достижения целей.</p>
             </div>
             <div class="relative bg-white p-6 rounded-lg shadow-lg">
-                <span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">3000* ₽</span>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Семейное консультирование</h3>
-                <p>Помощь в разрешении семейных конфликтов и улучшении взаимоотношений.</p>
+                <span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">2000 ₽</span>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Онлайн-консультация</h3>
+                <p>Удалённые сессии для удобства клиентов, не имеющих возможности посетить офис.</p>
             </div>
             <div class="relative bg-white p-6 rounded-lg shadow-lg">
-                <span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">3000* ₽</span>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Групповые тренинги</h3>
-                <p>Семинары и тренинги для развития личностных и профессиональных навыков.</p>
+                <span class="absolute -top-2 -right-2 bg-red-400 rounded-lg px-2 py-1/2 text-white text-[12px]">1500 ₽</span>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Детская консультация</h3>
+                <p>Работа с детьми для решения возрастных и поведенческих проблем.</p>
             </div>
         </div>
+        <p class="text-sm text-gray-500 mt-4">* Стоимость указана за стандартную 60-минутную консультацию. Возможны скидки и акции.</p>
     </div>
 </section>
 
@@ -144,12 +141,47 @@ import ECalendar from "../components/ECalendar.vue";
                     </a>
                 </li>
             </ul>
+
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Основные области консультирования</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li class="text-gray-700">Кризисные состояния и психотравмы</li>
+                    <li class="text-gray-700">Панические атаки</li>
+                    <li class="text-gray-700">Психосоматические расстройства</li>
+                    <li class="text-gray-700">Чувство вины, обиды, разочарования</li>
+                    <li class="text-gray-700">Беспричинное волнение, тревожность, вспышки агрессии</li>
+                    <li class="text-gray-700">Страхи, фобии</li>
+                    <li class="text-gray-700">Трудности в сфере детско-родительских отношений</li>
+                    <li class="text-gray-700">Работа с ответственностью (за себя, свою жизнь, адекватное разграничение своей и чужой ответственности)</li>
+                    <li class="text-gray-700">Переживания, связанные с утратой близкого человека</li>
+                </ul>
+            </div>
+
+            <span>В работе опираюсь на научные методы, принципы и правила оказания психокоррекционной помощи. Придерживаюсь принципов профессиональной этики: конфиденциальность и уважительное отношение к клиенту.</span>
         </div>
     </div>
 </section>
 
+<ECalendar client:only />
+
+<!-- "Обо мне" -->
+<section id="about" class="py-8 px-4 lg:px-20">
+    <div class="mx-auto">
+        <h2 class="text-3xl inline-flex font-semibold text-green-500 mb-4 border-b">Обо мне</h2>
+        <p class="text-lg mb-4">
+            Здравствуйте! Я Татьяна Жильцова, психолог с 19-летним опытом практики. Окончила Томский государственный университет в 2003 году по специальности "Психология". В 2022 году прошла профессиональную переподготовку по специальности "Клиническая (медицинская) психология" в Международной Академии Экспертизы и Оценки.
+        </p>
+        <p class="text-lg mb-4">
+            Я специализируюсь на детско-родительских отношениях, являюсь тренером по развитию эмоционального интеллекта и ведущей курса "Школа счастливых родителей". Мой опыт позволяет эффективно работать с взрослыми, подростками и детьми.
+        </p>
+        <p class="text-lg mb-4">
+            В своей работе придерживаюсь принципов профессиональной этики, обеспечивая конфиденциальность и уважительное отношение к каждому клиенту.
+        </p>
+    </div>
+</section>
+
 <!-- "Контакты" -->
-<section id="contact" class="bg-background text-primary py-16 px-4 lg:px-20">
+<section id="contact" class="bg-background bg-gray-50 text-primary py-16 px-4 lg:px-20">
     <div class="container mx-auto">
         <h2 class="text-3xl inline-flex text-accent font-semibold text-green-500 mb-4 border-b">Контакты</h2>
         <p class="text-lg mb-4">Вы можете связаться со мной по телефону или по мессенджерам для записи на
