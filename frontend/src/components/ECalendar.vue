@@ -14,7 +14,15 @@
       </template>
 
       <template #default>
-        <div class="flex flex-col gap-4">
+        <el-form class="flex flex-col gap-4">
+          <el-input
+            v-model="clientPhone"
+            placeholder="Введите номер телефона"
+            :rules="phoneValidationRules"
+          >
+            <template #prepend> +7 </template>
+          </el-input>
+
           <span>{{ formatDate(pickedDate) }}</span>
 
           <div class="flex items-center justify-center gap-2">
@@ -23,7 +31,7 @@
             <el-button @click="pickTime('13:00')">13:00</el-button>
             <el-button @click="pickTime('14:00')">14:00</el-button>
           </div>
-        </div>
+        </el-form>
       </template>
     </ElDrawer>
   </el-config-provider>
@@ -33,6 +41,8 @@
 import {
   ElCalendar,
   ElDialog,
+  ElForm,
+  ElInput,
   ElButton,
   ElDrawer,
   ElConfigProvider,
@@ -44,9 +54,23 @@ import axios from "axios";
 const value = ref(new Date());
 const pickedDate = ref(null);
 const pickedTime = ref(null);
+const clientPhone = ref(null);
 
 const isTimeModalVisible = ref(false);
 const isMobile = ref(false);
+
+const phoneValidationRules = [
+  {
+    required: true,
+    message: "Введите номер телефона",
+    trigger: "blur",
+  },
+  {
+    pattern: /^(\+7)\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/,
+    message: "Неверный формат номера телефона",
+    trigger: "blur",
+  },
+];
 
 const openTimeModal = (pDate) => {
   pickedDate.value = pDate;
@@ -60,9 +84,9 @@ const pickTime = (time) => {
 
 const sendTelegramMessage = async () => {
   const token = "8119592694:AAFioIvcvcKhUNWb25negaSh2eNHH_2OPM0";
-  if (pickedDate.value && pickedTime.value) {
+  if (pickedDate.value && pickedTime.value && clientPhone.value) {
     const formattedDate = formatDate(pickedDate.value);
-    const message = `Клиент записался на ${pickedTime.value} ${formattedDate}`;
+    const message = `Клиент записался на ${pickedTime.value} ${formattedDate}, номер телефона: +7 ${clientPhone.value}`;
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
     try {
@@ -79,7 +103,7 @@ const sendTelegramMessage = async () => {
           },
         },
       );
-      console.log("Сообщение отправлено в Telegram", response.data);
+      isTimeModalVisible.value = false;
     } catch (error) {
       console.error("Ошибка при отправке сообщения в Telegram:", error);
     }
